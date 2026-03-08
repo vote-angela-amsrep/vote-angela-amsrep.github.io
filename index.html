@@ -110,9 +110,7 @@ nav a{
 }
 
 .hero-miffy{
-  /* width:min(220px, 40vw); */
-  width:200px;
-  /* flex:0 1 220px; */
+  width:300px;
 }
 
 /* SECTIONS */
@@ -127,13 +125,21 @@ nav a{
 text-align: center;
 }
 
+.section p{
+    text-align: center;
+    padding: 20px 100px 0px 100px; 
+    /* top right bottom left */
+}
+
 /* ABOUT */
 
 .about-layout{
-  display:grid;
-  grid-template-columns:minmax(240px, 380px) minmax(280px, 1fr);
-  gap:32px;
   align-items:center;
+  justify-content: center;
+}
+
+.about-layout p{
+    text-align: center;
 }
 
 .about-image{
@@ -141,10 +147,6 @@ text-align: center;
   max-width:380px;
   border-radius:24px;
   justify-self:center;
-}
-
-.about-text{
-  max-width:700px;
 }
 
 /* CARDS */
@@ -224,20 +226,22 @@ footer{
     justify-content:center;
   }
 
-  .hero-miffy{
-    width:200px;
-    height:auto;
-    
-  }
-
   .about-layout{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+  display:grid;
+  grid-template-columns:1fr;
+  gap:24px;
+}
 
-  .about-text{
-    max-width:100%;
-  }
+.about-text{
+  order:1;
+  text-align:center;
+}
+
+.about-image{
+  order:2;
+  width:100%;
+  max-width:380px;
+}
 
   .card{
     min-height:auto;
@@ -276,12 +280,11 @@ footer{
 </section>
 
 <section class="section" id="about">
-  <h2>About Me</h2>
-
-  <div class="about-layout">
-    <img class="about-image" src="sigh.png" alt="Angela campaign graphic">
-
-    <div class="about-text">
+    <div class="about-layout">
+         <h2>About Me</h2>
+            <img class="about-image" src="sigh.png" alt="Angela campaign graphic">
+    
+        <div class="about-text">
       <p>
         Hi! I'm Angela, a fourth-year Biology student and current AVP Communications
         for the Science Undergraduate Society. Over the past three years, I’ve had
@@ -296,7 +299,7 @@ footer{
         and represented at the AMS level.
       </p>
     </div>
-  </div>
+    </div>
 </section>
 
 <section class="section" id="platform">
