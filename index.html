@@ -1,255 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Angela Qian | AMS Representative</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
---lightblue:#AFC4DE;
---darkblue:#0F2F8F;
---orange:#F77F2B;
+  --lightblue:#AFC4DE;
+  --darkblue:#0F2F8F;
+  --orange:#F77F2B;
+  --white:#ffffff;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Inter",sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Teachers", sans-serif;
 }
 
 body{
-background:var(--lightblue);
-color:var(--darkblue);
+  background:var(--lightblue);
+  color:var(--darkblue);
+  line-height:1.5;
+}
+
+img{
+  /* max-width:100%; */
+  height:auto;
+  display:block;
 }
 
 /* NAV */
 
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:white;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 nav h2{
-font-weight:700;
+  font-weight:700;
+}
+
+nav div{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 nav a{
-margin-left:20px;
-text-decoration:none;
-color:var(--darkblue);
-font-weight:600;
+  text-decoration:none;
+  color:var(--darkblue);
+  font-weight:600;
 }
 
 /* HERO */
 
 .hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 8%;
-flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding:60px 8%;
+  flex-wrap:wrap;
 }
 
 .hero-text{
-max-width:520px;
+  flex:1 1 420px;
+  /* max-width:560px; */
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:20px;
+  font-size:clamp(2.2rem, 5vw, 3.2rem);
+  margin-bottom:20px;
+  line-height:1.1;
 }
 
 .hero p{
-font-size:18px;
-margin-bottom:25px;
+  font-size:1.1rem;
+  margin-bottom:25px;
+  max-width:520px;
 }
 
 .vote-btn{
-background:var(--orange);
-color:white;
-padding:14px 28px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-display:inline-flex;
-align-items:center;
-gap:10px;
+  background:var(--orange);
+  color:white;
+  padding:14px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+
+.vote-btn img{
+  width:28px;
+  height:auto;
 }
 
 .hero-miffy{
-width:180px;
+  /* width:min(220px, 40vw); */
+  width:200px;
+  /* flex:0 1 220px; */
 }
 
 /* SECTIONS */
 
 .section{
-padding:80px 8%;
+  padding:60px 8%;
 }
 
 .section h2{
-font-size:36px;
-margin-bottom:40px;
+  font-size:clamp(1.8rem, 4vw, 2.3rem);
+  margin-bottom:30px;
+text-align: center;
+}
+
+/* ABOUT */
+
+.about-layout{
+  display:grid;
+  grid-template-columns:minmax(240px, 380px) minmax(280px, 1fr);
+  gap:32px;
+  align-items:center;
+}
+
+.about-image{
+  width:100%;
+  max-width:380px;
+  border-radius:24px;
+  justify-self:center;
+}
+
+.about-text{
+  max-width:700px;
 }
 
 /* CARDS */
 
 .card-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
 }
 
 .card{
-background:var(--darkblue);
-color:white;
-padding:30px;
-border-radius:25px;
-position:relative;
+  background:var(--darkblue);
+  color:white;
+  padding:28px;
+  border-radius:25px;
+  position:relative;
+  min-height:180px;
+  overflow:hidden;
+}
+
+.card h3{
+  margin-bottom:12px;
+  padding-right:50px;
+}
+
+.card p{
+  padding-right:20px;
 }
 
 .card img{
-position:absolute;
-right:-15px;
-top:-20px;
-width:60px;
-}
-
-/* ENDORSEMENTS */
-
-.endorse{
-background:white;
-padding:30px;
-border-radius:20px;
+  /* position:absolute; */
+  position:relative;
+  left:25%;
+  width:100px;
+  height:auto;
+  margin-bottom:25px;
 }
 
 /* VOTE */
 
 .vote-section{
-text-align:center;
+  text-align:center;
 }
 
 .vote-section img{
-width:120px;
-margin-bottom:20px;
+  width: 400px;
+  margin:0 auto 20px;
 }
 
 /* FOOTER */
 
 footer{
-text-align:center;
-padding:40px;
-font-size:14px;
+  text-align:center;
+  padding:40px 20px;
+  font-size:14px;
 }
 
+/* MOBILE */
+
+@media (max-width: 768px){
+  .hero{
+    padding:50px 8%;
+    text-align:center;
+    justify-content:center;
+  }
+
+  .hero-text{
+    max-width:100%;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .vote-btn{
+    justify-content:center;
+  }
+
+  .hero-miffy{
+    width:200px;
+    height:auto;
+    
+  }
+
+  .about-layout{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .about-text{
+    max-width:100%;
+  }
+
+  .card{
+    min-height:auto;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <nav>
-<h2>Angela Qian</h2>
-<div>
-<a href="#about">About</a>
-<a href="#platform">Platform</a>
-<a href="#vote">Vote</a>
-</div>
+  <h2>Angela Qian</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#platform">Platform</a>
+    <a href="#vote">Vote</a>
+  </div>
 </nav>
 
 <section class="hero">
+  <div class="hero-text">
+    <h1>Vote Angela for AMS Rep</h1>
 
-<div class="hero-text">
+    <p>
+      Fourth-year Biology student advocating for science students,
+      greater transparency, and stronger academic support.
+    </p>
 
-<h1>Vote Angela for AMS Rep</h1>
+    <a class="vote-btn" href="#vote">
+      Vote Now
 
-<p>
-Fourth-year Biology student advocating for science students,
-greater transparency, and stronger academic support.
-</p>
+    </a>
+  </div>
 
-<a class="vote-btn" href="#vote">
-Vote Now
-<img src="miffy-vote.png" width="30">
-</a>
-
-</div>
-
-<img class="hero-miffy" src="miffy-wave.png">
-
+  <img class="hero-miffy" src="miffy-wave.png" alt="Waving Miffy">
 </section>
 
 <section class="section" id="about">
+  <h2>About Me</h2>
 
-<h2>About Me</h2>
+  <div class="about-layout">
+    <img class="about-image" src="sigh.png" alt="Angela campaign graphic">
 
-<p style="max-width:700px;">
-Hi! I'm Angela, a fourth-year Biology student and current AVP Communications
-for the Science Undergraduate Society. Over the past three years, I’ve had
-the opportunity to connect with science students and see firsthand the
-issues that matter most to our community.
+    <div class="about-text">
+      <p>
+        Hi! I'm Angela, a fourth-year Biology student and current AVP Communications
+        for the Science Undergraduate Society. Over the past three years, I’ve had
+        the opportunity to connect with science students and see firsthand the
+        issues that matter most to our community.
+      </p>
 
-As an AMS Representative, I want to ensure science students are heard
-and represented at the AMS level.
-</p>
+      <br>
 
+      <p>
+        As an AMS Representative, I want to ensure science students are heard
+        and represented at the AMS level.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="platform">
+  <h2>My Platform</h2>
 
-<h2>My Platform</h2>
+  <div class="card-grid">
+    <div class="card">
+      <img src="miffy.png" alt="Miffy icon">
+      <h3>Transparency</h3>
+      <p>Clear communication about where student fees go.</p>
+    </div>
 
-<div class="card-grid">
+    <div class="card">
+      <img src="miffy.png" alt="Miffy icon">
+      <h3>Academic Support</h3>
+      <p>Better study spaces and support for review sessions.</p>
+    </div>
 
-<div class="card">
-<img src="miffy.png">
-<h3>Transparency</h3>
-<p>Clear communication about where student fees go.</p>
-</div>
-
-<div class="card">
-<img src="miffy.png">
-<h3>Academic Support</h3>
-<p>Better study spaces and support for review sessions.</p>
-</div>
-
-<div class="card">
-<img src="miffy.png">
-<h3>Science Representation</h3>
-<p>Ensuring science voices are represented in AMS decisions.</p>
-</div>
-
-</div>
-
+    <div class="card">
+      <img src="miffy.png" alt="Miffy icon">
+      <h3>Science Representation</h3>
+      <p>Ensuring science voices are represented in AMS decisions.</p>
+    </div>
+  </div>
 </section>
 
 <section class="section vote-section" id="vote">
+  <img src="miffy-vote.png" alt="Miffy vote graphic">
 
-<img src="miffy-vote.png">
+  <h2>How to Vote</h2>
 
-<h2>How to Vote</h2>
+  <p style="margin-bottom:20px;">
+    Voting takes less than a minute and helps shape student life at UBC.
+  </p>
 
-<p style="margin-bottom:20px;">
-Voting takes less than a minute and helps shape student life at UBC.
-</p>
-
-<a class="vote-btn" href="https://ams.simplyvoting.com/" target="_blank">
-Go to Voting
-</a>
-
+  <a class="vote-btn" href="https://ams.simplyvoting.com/" target="_blank" rel="noopener noreferrer">
+    Go to Voting
+  </a>
 </section>
 
 <footer>
-
-© Angela Qian Campaign  
-Follow the campaign on Instagram
-
+  © Angela Qian Campaign<br>
+  Follow the campaign on Instagram
 </footer>
 
 </body>
